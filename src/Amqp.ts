@@ -183,8 +183,8 @@ export default class Amqp {
         ...this.config.amqpProperties,
         ...properties,
       }
-      if(config.amqpProperties?.type != "xml"){
-        msg = JSON.stringify(msg);
+      if(config.amqpProperties?.type != 'xml'){
+        msg = JSON.stringify(msg)
       }
       if (name) {
         this.channel.publish(
